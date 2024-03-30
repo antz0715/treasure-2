@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- This line tells your web browser that this is an HTML5 document. -->
+
+<html lang="en">
+<!-- The <html> tag starts the HTML document. 'lang="en"' tells the browser that the content is in English. -->
+
+<head>
+    <!-- The <head> section contains information about the webpage, like its title and how to style it. -->
+    <meta charset="UTF-8">
+    <!-- This <meta> tag tells the browser to use UTF-8 character encoding, which includes most characters from all languages. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This <meta> tag helps make your webpage look good on all devices, including phones and tablets, by adjusting the layout's width and initial zoom level. -->
+    <title>Treasure Hunt Adventure</title>
+    <!-- The <title> tag sets the name of the webpage, which you can see in the browser's title bar or tab. -->
+    <style>
+        /* Inside <style> tags, you write CSS code, which changes how your webpage looks. */
+        .grid {
+            display: grid; /* This makes the container use a grid layout. */
+            grid-template-columns: repeat(6, 50px); /* Creates 6 columns, each 50px wide. */
+            grid-template-rows: repeat(6, 50px); /* Creates 6 rows, each 50px tall. */
+            gap: 5px; /* Sets the space between grid items to 5px. */
+        }
+        .cell {
+            width: 50px; /* Sets the width of each cell to 50px. */
+            height: 50px; /* Sets the height of each cell to 50px. */
+            border: 1px solid black; /* Adds a black border around each cell. */
+            display: flex; /* Uses Flexbox layout to help center the content inside the cell. */
+            align-items: center; /* Centers the cell's content vertically. */
+            justify-content: center; /* Centers the cell's content horizontally. */
+            font-size: 20px; /* Makes the text inside the cell larger, so it's easier to see. */
+        }
+        .player {
+            background-color: lightblue; /* Changes the background color of a cell. Not used in the clickable version but good for future use. */
+        }
+    </style>
+</head>
+<body>
+    <!-- The <body> tag contains everything that shows up as part of the webpage's content. -->
+    <div id="grid" class="grid"></div>
+    <!-- This <div> is where your game's grid will appear. It uses the 'grid' class styles defined above. -->
+    <button onclick="startGame()">Start Game</button>
+    <!-- A button that, when clicked, will run the 'startGame()' function to reset the game. -->
+    <script src="game.js"></script>
+    <!-- The <script> tag with a 'src' attribute links to your JavaScript file that makes the game work. -->
+</body>
+</html>
